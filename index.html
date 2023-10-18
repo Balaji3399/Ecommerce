@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssuranceMART</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <style>
+        table , th , tr , td{
+            border-collapse: collapse;
+            border: 2px solid #000;
+            width: 50%;
+        }
+
+        table th , td{
+            padding: 5px 10px 5px 10px ;
+        }
+
+        .item ,.text-center{
+            font-size: 1.15rem;
+            left:15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2 class="logoo">Assurance<span class="special">MART</span></h2>
+        <div class="search">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Search Products ">
+                    <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="main" type="none">
+                    <a href=""><i class="fa-regular fa-user"></i>Signin</a>
+                    <a href=""><i class="fa-solid fa-location-dot"></i>Location</a>
+                    <button class="opencart" onclick="open_cart()"><i class="fa-solid fa-cart-plus"></i>Cart</button>
+                </li>
+            </ul>
+            <ul class="list2">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <button class="bar" onclick="open_sidebar()"><i class="fa-solid fa-bars"></i></button>       
+        </div>
+        <div class="side-bar">
+            <button class="close" onclick="close_sidebar()"><i class="fa-regular fa-circle-xmark"></i></button>
+            <ol type="none">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ol>
+        </div>
+
+        <div id="my-cart">
+            <button class="close_cart" onclick="close_cart()"><i class="fa-regular fa-circle-xmark"></i></button>
+            <h2>Your Shopping Cart</h2>
+            <table id="table-data">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </table>
+            <hr>
+            <div>
+                <h2>Total :</h2>
+                <p class="total"></p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="home">
+        <div class="welcome">
+            <h3>Welcome to <span class="dynamic-names logoo"></span></h3>
+        </div>
+        <div class="welcome-desc">
+            <h2><em>"Step into a World of Style and Convenience.!!!"</em></h2>
+        </div> 
+    </div>
+
+    <div class="categories">
+        <h2 class="text-center"><b>Categories</b></h2>
+        <div class="category-items row">
+            <div class="col-6 col-sm-4 col-md-2 items item1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTOCFRcvphnRFUxpCWvfz65z-f3C3uDTLYw&usqp=CAU" alt="">
+                <span class="next-icon"><a href="mobiles.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">Mobiles & Tablets</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 items item2">
+                <img src="./Images/electronics-img.png" alt="">
+                <span class="next-icon"><a href="electronics.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">Electronics</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 items item3">
+                <img  src="./Images/pngegg (2).png" alt="">
+                <span class="next-icon"><a href="fashion.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">Fashion</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 items item4">
+                <img src="./Images/tvs & appliances.png" alt="">
+                <span class="next-icon"><a href="tvs.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">TV's & Appliances</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 items item5">
+                <img  src="./Images/furniture.png" alt="">
+                <span class="next-icon"><a href="furniture.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">Furniture</p>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 items item1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTOCFRcvphnRFUxpCWvfz65z-f3C3uDTLYw&usqp=CAU" alt="">
+                <span class="next-icon"><a href="mobiles.html"><i class="fa-solid fa-circle-chevron-right"></i></a></span>
+                <p class="text-center">Mobiles & Tablets</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured">
+        <h2 class="text-left"><b>Featured Products</b></h2>
+        <div class="featured-products">
+            <div class="col-6 col-sm-4 col-md-2 item items1">
+                <img style="width: 70%;" src="./Images/iphone.webp" alt="">                
+                <p class="text-center">IPhone 14 Pro <br> <b>&#8377; 65,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Iphone 14 Pro</p>
+                        <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>128 GB ROM</li>
+                                <li>17.02 cm (6.7 inch) Super Retina XDR Display</li>
+                                <li>48MP + 12MP + 12MP | 12MP Front Camera</li>
+                                <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+                            </ul>
+                        </p>
+                        <p>Brand: Apple</p>
+                        <p>Model: AP4521SD2</p>
+                        <p>Price : &#8377;<span class="price">65999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items2">
+                <img style="width: 100%;float:inline-end" src="./Images/samsung.webp" alt="">
+                <p class="text-center">Samsung S23 Ultra 5G <br> <b>1,14,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Samsung Galaxy S23 Ultra 5G</p>
+                        <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>12 GB RAM | 256 GB ROM
+                                    17.27 cm (6.8 inch) Quad HD+ Display
+                                    200MP + 10MP + 12MP + 10MP | 12MP Front Camera
+                                    5000 mAh Lithium Ion Battery
+                                    Qualcomm Snapdragon 8 Gen 2 Processor</li>
+                            </ul>
+                        </p>
+                        <p>Brand: Samsung</p>
+                        <p>Model: AP4521SD2</p>
+                        <p>Price : &#8377;<span class="price">114999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> 
+                            Get a smartphone for yourself that can detect your moods and react appropriately. The Samsung Galaxy Ultra's potent processor and advanced camera sensor can handle low light and noise reduction. The phone's Snapdragon 8 Gen 2 processor, which also provides a long battery life to carry you through even the busiest days, also enables quick gaming and video streaming. You can also launch Expert RAW to take high-resolution RAW photos that are vivid and packed with information. Moreover, Dynamic AMOLED 2X offers clear, brilliant details in both bright and low-light conditions. Additionally, to smooth up gaming and save power, the refresh rate is automatically optimised with 120 Hz technology.</p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items3">
+                <img style="width: 100%;" src="https://rukminim2.flixcart.com/image/416/416/kiyw9e80-0/television/p/0/w/32path0011-thomson-original-imafynyvsmeuwtzr.jpeg?q=70" alt="">
+                <p class="text-center">LG UQ7550 108 cm  <br> <b>&#8377;29,099</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: LG UQ7550 108 cm </p>
+                        <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>108 cm (43 inch) Ultra HD (4K) LED Smart WebOS TV 2023 Edition with a5 Gen5 AI Processor 4K, Magic Remote, 60Hz Refresh Rate  (43UQ7550PSF)</li>
+                                <li>Supported Apps: Netflix|Prime Video|Disney+Hotstar|Youtube
+                                    Operating System: WebOS
+                                    Resolution: Ultra HD (4K) 3840 x 2160 Pixels
+                                    Sound Output: 20 W
+                                    Refresh Rate: 60 Hz</li>
+                            </ul>
+                        </p>
+                        <p>Brand: LG</p>
+                        <p>Model: AP43225SD2</p>
+                        <p>Price : &#8377;<span class="price">29099</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> 
+                            
+                            The LG UQ7550 TV is a gateway to a world of breathtaking entertainment. Its crystal clear 4K experience, powered by the α5 Gen 5 AI Processor 4K, delivers vivid colours, breathtaking detail, and an immersive viewing experience. With features like AI Super Upscaling, Dynamic Tone Mapping, AI Brightness Control, and a range of smart functionalities, this TV sets the bar high for captivating entertainment. Whether you're a movie enthusiast, a sports fan, or a gaming enthusiast, the LG UQ7550 will transform your living room into a personal theater, providing endless hours of enjoyment for you and your loved ones. </p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items4">
+                <img style="width: 110%;" src="./Images/laptop1.png" alt="">
+                <p class="text-center">Dell Premium <br> <b>&#8377;59,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: DELL Inspiron 15 3520 </p>
+                        <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>Core i5 12th Gen Core i5 - (16 GB/512 GB SSD/Windows 11 Home) Inspiron 3520 Laptop  (15.6 inch, Platinum Silver, 1.65 kg, With MS Office)</li>
+                                <li>Preloaded with MS Office
+                                    Light Laptop without Optical Disk Drive
+                                    15.6 inch FHD 1920x1080, Non-Touch, AG, WVA, LED-Backlit, Narrow Border Display</li>
+                            </ul>
+                        </p>
+                        <p>Brand: DELL</p>
+                        <p>Model: A64521A2D2</p>
+                        <p>Price : &#8377;<span class="price">59999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> NA </p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items5">
+                <img style="width: 80%;" src="./Images/watch.png" alt="">
+                <p class="text-center">Premium Watch <br> <b>&#8377; 1999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: beatXP Sigma</p>
+                        <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>With Call Function
+                                    Touchscreen
+                                    Fitness & Outdoor</li>
+                                
+                            </ul>
+                        </p>
+                        <p>Brand: Smart</p>
+                        <p>Model: AS45221SD9</p>
+                        <p>Price : $<span class="price">1999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> 
+                            Step into a world of unrivalled convenience and luxury with the extraordinary beatXP Sigma smartwatch. Prepare to be captivated by its dazzling 1.38� round Ultra HD Display, which boasts an Always On Display feature that keeps you connected in the most stylish and seamless way imaginable. The 60Hz Refresh rate ensures every interaction feels smooth and effortless, complementing the advanced features and sleek design that make this an absolute must-have smartwatch for men and women.  </p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items6">
+                <img style="width: 90%;" src="./Images/laptop3.png" alt="">
+                <p class="text-center">Gaming Computer <br> <b>&#8377; 13,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: ASSEMBLD 2000 Core i3</p>
+                        <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>Core i3 (8 GB DDR3/1 TB/128 GB SSD/Windows 11 Home/20 Inch Screen/ASSEMBLED PC) with MS Office  (Black, 45 cm x 55 cm x 15 cm, 5 kg)</li>
+                                <li>Windows 11 Home
+                                    Intel Core i3
+                                    HDD Capacity 1 TB
+                                    RAM 8 GB DDR3
+                                    20 inch Display
+                                    yes</li>
+                                
+                            </ul>
+                        </p>
+                        <p>Brand: PC</p>
+                        <p>Model: AP4451AD2</p>
+                        <p>Price : &#8377;<span class="price">13999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> This Computer is Assembled Computer build with as per available Cabinet, power supply, LED Monitor, Keyboard Mouse and other Accessories. The PC comes with Trial version 10 and Microsoft Office. There is no DVD writer in this PC. There is no warranty for software you can claim for only hardware parts, no door-to-door service available, you can use this pc for Office, Online Study, Programming or Gamming purpose (Note before buying please read warranty policy carefully) </p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items7">
+                <img style="width: 100%;" src="./Images/laptop4.png" alt="">
+                <p class="text-center">Lenovo ThinkPad <br> <b>&#8377; 16,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Lenovo ThinkPad</p>
+                        <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>6 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                                <li>26.95 cm (10.61 inch) Full HD Display</li>
+                                <li>8.0 MP Primary Camera | 8 MP Front</li>
+                                <li>Android 12 | Battery: 7700 mAh</li>
+                                <li>Voice Call (Single Sim, Wifi, 4G LTE)</li>
+                                <li>Processor: Qualcomm Snapdragon SDM 6803</li>
+                            </ul>
+                        </p>
+                        <p>Brand: Lenovo</p>
+                        <p>Model: A64521SD2</p>
+                        <p>Price : $<span class="price">16999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> You can elevate your visual experience with the Lenovo which comes with a 120 Hz 2K Super Display. The large screen allows you to browse through the web, enhance creativity, and launch apps effortlessly. Featuring a 33 W SUPERVOOC charge, this tablet can be charged instantly. The 8360 mAh Mega Battery enables uninterrupted performance with its long-lasting battery life. With 16 GB of Dynamic RAM and 256 GB of ROM, this laptop’s performance and speed are bound to blow your mind. </p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items8">
+                <img style="width: 80%;" src="./Images/shoes.webp" alt="">
+                <p class="text-center">Sports classic Shoes <br> <b>&#8377; 1899</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Sports classic Shoes</p>
+                        <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Fabric insole</li>
+                        <li>Lace Fastening</li>
+                        <li>Fabric upper</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Lightweight</li>
+                        <li>Rubber sole</li>
+                        <li>Product Code: 465738181002</li>
+                    </ul>
+                </p>
+                <p>Brand: classic</p>
+                <p>Model: 465738181002</p>
+                <p>Price : &#8377;<span class="price">1899</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3 class="logoo">AssuranceMART</h3>
+            <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; 2023 </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                      </ul>
+                    </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

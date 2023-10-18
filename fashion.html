@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        table , th , tr , td{
+            border-collapse: collapse;
+            border: 2px solid #000;
+            width: 50%;
+          }
+          
+          table th , td{
+            padding: 5px 10px 5px 10px ;
+          }
+        
+        .slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            height: 600px;
+        }
+        
+        .slider {
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 400px; 
+            transition: all .3s ease-in-out;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        .prev, .next {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 20px 20px;
+            background-color: #222746;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .next {
+            margin-left: 85%;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: #7f9ec0;
+        }
+
+        .mens-wear-collection {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .womens-wear-collection {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        
+        .foot-wear-collection {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .menswear .item .text-center , .womenswear .item .text-center , .footwear .item .text-center{
+            font-size: 1.15rem;
+            left:15px;
+            position: absolute;
+        }
+
+        .menswear , .womenswear , .footwear {
+            margin-left: 80px;
+        }
+
+        .menswear h2 , .womenswear h2, .footwear h2{
+            position:relative;
+            margin: 40px 0 0 100px;
+        }
+        .company {
+            color: #b19975;
+            font-size: 1.1rem;
+        }
+
+        
+            .slide-title {
+                font-size: 3rem;
+                color: green;
+                margin: 60px 0 0 20px;
+                
+            }
+
+            
+            .slide-description {
+                font-size: 1.6rem;
+                color: #ffffff;
+                margin: 0 0 0 20px;
+            }
+
+            .slide-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ff3366;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .slide-button:hover {
+                background-color: #ff1a40;
+            }
+
+
+        .slide1{
+            background-image: url("https://www.bonsoir.co.in/cdn/shop/files/Banner-5_1.jpg?v=1681798953");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide2{
+            background-image: url("https://cdn.thecoolist.com/wp-content/uploads/2021/05/Men-clothing-websites.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide3{
+            background-image: url("https://www.bonsoir.co.in/cdn/shop/files/Banner-5_1.jpg?v=1681798953");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script id="replace_with_navbar"></script>
+
+    <div class="slide-container" style="margin-top: -25px;">
+        <div class="slider">
+            <div class="slide slide1">
+
+            </div>
+            <div class="slide slide2">
+                <h2 class="slide-title">Discover Your Style</h2>
+                <p class="slide-description">Elevate your fashion game with our latest collection. From casual to couture, we have it all.</p>
+            </div>
+            <div class="slide slide3">
+                
+            </div>
+        </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+
+    <div class="menswear">
+        <h2>Mens Wear</h2>
+        <button class="btn3">View All</button>
+        <div class="mens-wear-collection">
+        <div class="col-6 col-sm-4 col-md-2 item sale1">
+            <img style="width: 82%;float:inline-end" src="https://assets.ajio.com/medias/sys_master/root/20230629/AwsX/649ce763a9b42d15c91f0687/-473Wx593H-466065064-grey-MODEL.jpg" alt="">
+            <p class="text-center"> <span class="company">EYEBOGLER</span><br> Slim fit T-Shirt <br><b> &#8377; 499 </b></p>            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Slim fit T-Shirt</p>
+                    <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Regular Fit</li>
+                            <li>Package contains: 1 t-shirt</li>
+                            <li>Machine wash</li>
+                            <li>60% cotton, 40% polyester</li>
+                            <li>Product Code: 465544616008</li>
+                        </ul>
+                    </p>
+                    <p>Brand: EYEBOGLER</p>
+                    <p>Model: 465544616008</p>
+                    <p>Price : &#8377;<span class="price">499</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>        
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230623/xueo/6495038042f9e729d786b71c/-473Wx593H-464868395-beige-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">THE BEAR HOUSE</span><br> Slim fit Shirt <br><b> &#8377; 899 </b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Slim fit Shirt</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Slim Fit</li>
+                            <li>Package contains: 1 shirt</li>
+                            <li>Machine wash</li>
+                            <li>100% cotton</li>
+                            <li>Product Code: 464868395001</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Apple</p>
+                    <p>Model: 464868395001</p>
+                    <p>Price : &#8377;<span class="price">899</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230621/sz1G/6492201642f9e729d7599dde/-473Wx593H-463378835-brown-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">THE BEAR HOUSE</span><br> Slim fit Shirt <br><b> &#8377; 749 </b></p>            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Slim fit Shirt</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Slim Fit</li>
+                            <li>Package contains: 1 shirt</li>
+                            <li>Machine wash</li>
+                            <li>100% cotton</li>
+                            <li>Product Code: 464868395002</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Apple</p>
+                    <p>Model: 464868395002</p>
+                    <p>Price : &#8377;<span class="price">749</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 82%;" src="https://assets.ajio.com/medias/sys_master/root/20230925/pbDm/6511bd68afa4cf41f5098578/-473Wx593H-442295545-dkgrey-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">DNMX</span><br> Flat-Front Jogger Pant <br><b> &#8377; 899 </b></p>            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Flat-Front Jogger Pant</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Multiple pockets</li>
+                            <li>Slim Fit</li>
+                            <li>Package contains: 1 pants</li>
+                            <li>Machine wash</li>
+                            <li>Mid Rise</li>
+                            <li>100% Cotton</li>
+                            <li>Product Code: 442295545001</li>
+                        </ul>
+                    </p>
+                    <p>Brand: DNMX</p>
+                    <p>Model: 442295545001</p>
+                    <p>Price : &#8377;<span class="price">899</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230628/ythN/649b67c6eebac147fc132517/-473Wx593H-465647923-black-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">JUMP CUTS</span><br> Hooded T-shirt <br><b> &#8377; 999 </b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Hooded T-shirt</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Images may appear brighter than the actual product due to photographic effect.</li>
+                            <li>Slim Fit</li>
+                            <li>Package contains: 1 t-shirt</li>
+                            <li>Machine wash</li>
+                            <li>Cotton blend</li>
+                            <li>Product Code: 465647923001</li>
+                        </ul>
+                    </p>
+                    <p>Brand: JUMP CUTS</p>
+                    <p>Model: 465647923001</p>
+                    <p>Price : &#8377;<span class="price">999</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230602/BcFh/64796ce442f9e729d714044f/-473Wx593H-462137740-grey-MODEL2.jpg" alt="">                
+            <p class="text-center"> <span class="company">HASASI</span><br> Slim fit Jeans <br><b> &#8377; 1199 </b></p>            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Slim fit Jeans</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Multiple pockets</li>
+                            <li>Slim Fit</li>
+                            <li>Package contains: 1 pants</li>
+                            <li>Machine wash</li>
+                            <li>Mid Rise</li>
+                            <li>Product Code: 442295545004</li>
+                        </ul>
+                    </p>
+                    <p>Brand: HASASI</p>
+                    <p>Model: 442295545004</p>
+                    <p>Price : &#8377;<span class="price">1199</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230526/FQPL/647029d3d55b7d0c630b56fa/-473Wx593H-465544616-green-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">EYEBOGLER</span><br> Round-neck T-shirt <br><b> &#8377; 499 </b></p>
+                <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Iphone 14 Pro</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Regular Fit</li>
+                            <li>Package contains: 1 t-shirt</li>
+                            <li>Machine wash</li>
+                            <li>60% cotton, 40% polyester</li>
+                            <li>Product Code: 465544616005</li>
+                        </ul>
+                    </p>
+                    <p>Brand: EYEBOGLER</p>
+                    <p>Model: 465544616005</p>
+                    <p>Price : &#8377;<span class="price">499</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230624/e4ea/649663cfeebac147fcf20d64/-473Wx593H-465324816-tan-MODEL.jpg" alt="">                
+            <p class="text-center"> <span class="company">CAMPUS SUTRA</span><br> Zip Bomber Jacket <br><b> &#8377; 1199 </b></p>            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Iphone 14 Pro</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>128 GB ROM</li>
+                            <li>17.02 cm (6.7 inch) Super Retina XDR Display</li>
+                            <li>48MP + 12MP + 12MP | 12MP Front Camera</li>
+                            <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Apple</p>
+                    <p>Model: AP4521SD2</p>
+                    <p>Price : &#8377;<span class="price">499</span> </p>
+                    <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="womenswear">
+    <h2>Womens Wear</h2>
+    <button class="btn3">View All</button>
+    <div class="womens-wear-collection">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 80%;float:inline-end" src="https://assets.ajio.com/medias/sys_master/root/20230929/Ecqr/6516d618afa4cf41f51737a6/-473Wx593H-466651040-multi-MODEL.jpg" alt="">
+        <p class="text-center"> <span class="company">SLENOR</span><br> Floral Print Top <br><b> &#8377; 899 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Floral Print Top</h3>
+                <p></p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 160px; text-align:left">
+                        <li>Package Contains: 1 Top</li>
+                        <li>Machine wash</li>
+                        <li>Georgette</li>
+                        <li>Product Code: 466651040002</li>
+                    </ul>
+                </p>
+                <p>Brand: SLENOR</p>
+                <p>Model: 466651040002</p>
+                <p>Price : &#8377;<span class="price">899</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230829/1Luq/64ecf3b7afa4cf41f59273a4/-473Wx593H-466500593-black-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">LIMDO</span><br> Floral Print Flared Kurta <br><b> &#8377; 999 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Floral Print Flared Kurta</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Bottomwear Fabric: Georgette</li>
+                        <li>Dupatta Length:2.2m</li>
+                        <li>Dupatta Fabric: Georgette</li>
+                        <li>Package Contains: 1 Kurta, 1 Pants, 1 Dupatta.</li>
+                        <li>Machine wash</li>
+                        <li>Product Code: 466500593003</li>
+                    </ul>
+                </p>
+                <p>Brand: LIMDP</p>
+                <p>Model: 466500593003</p>
+                <p>Price : &#8377;<span class="price">999</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230802/AYms/64ca8bb0eebac147fca2c894/-473Wx593H-466387039-blue-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">HOUSE OF FASHION</span><br> Straight Kurta with Dupatta <br><b> &#8377; 1199 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Straight Kurta with Dupatta</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Bottomwear fabric: Rayon</li>
+                        <li>Dupatta fabric: Chinon</li>
+                        <li>Package contains: 1 kurta, 1 palazzos, 1 dupatta</li>
+                        <li>Dry clean</li>
+                        <li>Rayon</li>
+                        <li>Product Code: 466387039002</li>
+                    </ul>
+                </p>
+                <p>Brand: HOUSE OF FASHION</p>
+                <p>Model: 466387039002</p>
+                <p>Price : &#8377;<span class="price">1199</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230602/Z6aR/64791e2f42f9e729d709d001/-473Wx593H-461173018-grey-MODEL4.jpg" alt="">                
+        <p class="text-center"> <span class="company">FASHION</span><br> Latest Fashion <br><b> &#8377; 699 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Latest Fashion</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 160px; text-align:left">
+                        <li>Package Contains: 1 Top</li>
+                        <li>Machine wash</li>
+                        <li>Georgette</li>
+                        <li>Product Code: 466651040002</li>
+                    </ul>
+                </p>
+                <p>Brand: FASHION</p>
+                <p>Model: 466651040002</p>
+                <p>Price : &#8377;<span class="price">499</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230711/VyeE/64ad4f02a9b42d15c94ccdd0/-473Wx593H-466313443-maroon-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">RASTRITI</span><br> Banarasi Silk Saree <br><b> &#8377; 1499 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Banarasi Silk Saree</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Blouse piece length: 0.8 m</li>
+                        <li>Saree length: 5.5 m</li>
+                        <li>Package contains: 1 saree with blouse piece</li>
+                        <li>Dry clean</li>
+                        <li>Soft silk</li>
+                        <li>Product Code: 466313443002</li>
+                    </ul>
+                </p>
+                <p>Brand: RASTRITI</p>
+                <p>Model: 466313443002</p>
+                <p>Price : &#8377;<span class="price">1499</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230723/QGYJ/64bc7fe4eebac147fc833f5a/-473Wx593H-466364813-cream-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">WILORI</span><br> Kanjeevaram Saree <br><b> &#8377; 1599 </b></p>        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Kanjeevaram Saree</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Blouse piece length: 0.8 m</li>
+                        <li>Saree length: 5.5 m</li>
+                        <li>Package contains: 1 saree with blouse piece</li>
+                        <li>Dry clean</li>
+                        <li>Soft silk</li>
+                        <li>Product Code: 466313443002</li>
+                    </ul>
+                </p>
+                <p>Brand: WILORI</p>
+                <p>Model: 466313443002</p>
+                <p>Price : &#8377;<span class="price">1599</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230728/QPze/64c3d7d9a9b42d15c978e993/-473Wx593H-466396303-mustard-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">SELVIA</span><br> 3-Piece Top with Trousers <br><b> &#8377; 999 </b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: 3-Piece Top with Trousers</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 160px; text-align:left">
+                        <li>Package Contains: 1 Top</li>
+                        <li>Machine wash</li>
+                        <li>Georgette</li>
+                        <li>Product Code: 466651040002</li>
+                    </ul>
+                </p>
+                <p>Brand: SELVIA</p>
+                <p>Model: 466651040002</p>
+                <p>Price : &#8377;<span class="price">999</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230927/PNE0/65141663afa4cf41f51189e5/-473Wx593H-466643020-orange-MODEL.jpg" alt="">
+        <p class="text-center"> <span class="company">SLENOR</span><br> Crew-Neck T-Shirt <br><b> &#8377; 849 </b></p>                
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Crew-Neck T-Shirt </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 160px; text-align:left">
+                        <li>Package Contains: 1 Top</li>
+                        <li>Machine wash</li>
+                        <li>Georgette</li>
+                        <li>Product Code: 466651040002</li>
+                    </ul>
+                </p>
+                <p>Brand: SLENOR</p>
+                <p>Model: 466651040002</p>
+                <p>Price : &#8377;<span class="price">849</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="footwear">
+    <h2>Foot Wear</h2>
+    <button class="btn3">View All</button>
+    <div class="foot-wear-collection">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 90%;float:inline-end" src="https://assets.ajio.com/medias/sys_master/root/20231012/vmxf/6527aa0aafa4cf41f53d74c1/-473Wx593H-465738181-black-MODEL.jpg" alt="">
+        <p class="text-center"> <span class="company">PUMA </span> <br> Men Robust V2 Shoes <br> 1899</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Men Robust V2 Shoes</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Fabric insole</li>
+                        <li>Lace Fastening</li>
+                        <li>Fabric upper</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Lightweight</li>
+                        <li>Rubber sole</li>
+                        <li>Product Code: 465738181002</li>
+                    </ul>
+                </p>
+                <p>Brand: PUMA</p>
+                <p>Model: 465738181002</p>
+                <p>Price : &#8377;<span class="price">1899</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230621/WEQC/64925aea42f9e729d762de68/-473Wx593H-463794468-navy-MODEL.jpg" alt="">    
+        <p class="text-center"><span class="company">CAMPUS </span> <br> Running Sports Shoes <br> 1399</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Running Sports Shoes</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Fabric insole</li>
+                        <li>Lace Fastening</li>
+                        <li>Fabric upper</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Lightweight</li>
+                        <li>Rubber sole</li>
+                        <li>Product Code: 465738181003</li>
+                    </ul>
+                </p>
+                <p>Brand: CAMPUS</p>
+                <p>Model: 465738181003</p>
+                <p>Price : &#8377;<span class="price">1399</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/hc8/h76/14641991483422/-473Wx593H-410166735-x2l-MODEL.jpg" alt="">                
+        <p class="text-center"> <span class="company">SUPERDRY </span> <br> Beachwear Sliders <br> 2599 </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Beachwear Sliders</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Fabric insole</li>
+                        <li>Fabric upper</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Lightweight</li>
+                        <li>Rubber sole</li>
+                        <li>Product Code: 465738181004</li>
+                    </ul>
+                </p>
+                <p>Brand: SUPERDRY</p>
+                <p>Model: 465738181004</p>
+                <p>Price : &#8377;<span class="price">2599</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 82%;" src="https://assets.ajio.com/medias/sys_master/root/20230620/Ic37/6491c547d55b7d0c637c1979/-473Wx593H-469480130-grey-MODEL.jpg" alt="">                
+        <p class="text-center"><span class="company">CAMPUS </span> <br>
+            Men Dual-Strap Sandals <br> 899 </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Men Dual-Strap Sandals</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Fabric insole</li>
+                        <li>Fabric upper</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Lightweight</li>
+                        <li>Rubber sole</li>
+                        <li>Product Code: 465738181005</li>
+                    </ul>
+                </p>
+                <p>Brand: CAMPUS</p>
+                <p>Model: 465738181005</p>
+                <p>Price : &#8377;<span class="price">899</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230821/pwRb/64e376e5ddf7791519573c3b/-473Wx593H-469538447-black-MODEL.jpg" alt="">                
+        <p class="text-center"><span class="company">CROCS</span> <br> Women Brooklyn <br> 3999</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Women Brooklyn</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Croslite upper & sole</li>
+                        <li>Heel height: 1.7 inches</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Product Code: 469538447012</li>
+                    </ul>
+                </p>
+                <p>Brand: CROCS</p>
+                <p>Model: 469538447012</p>
+                <p>Price : &#8377;<span class="price">3999</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230629/LbtP/649c8b17a9b42d15c916487c/-473Wx593H-466317878-pink-MODEL.jpg" alt="">                
+        <p class="text-center"><span class="company">SHEZONE </span> <br>
+            Open-Toe Sling <br> 899</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Open-Toe Sling</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Croslite upper & sole</li>
+                        <li>Heel height: 1.7 inches</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Product Code: 469538447013</li>
+                    </ul>
+                </p>
+                <p>Brand: SHEZONE</p>
+                <p>Model: 469538447013</p>
+                <p>Price : &#8377;<span class="price">899</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230711/9Max/64ac8551eebac147fc622086/-473Wx593H-466345130-silver-MODEL.jpg" alt="">                
+        <p class="text-center"><span class="company">JM LOOKS </span> <br>
+            Heeled Sandals <br> 1299</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Heeled Sandals</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Croslite upper & sole</li>
+                        <li>Heel height: 1.7 inches</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Product Code: 469538447013</li>
+                    </ul>
+                </p>
+                <p>Brand: JM LOOKS</p>
+                <p>Model: AP4521SD2</p>
+                <p>Price : &#8377;<span class="price">1299</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://assets.ajio.com/medias/sys_master/root/20230824/rXWm/64e77c3dddf77915196a371c/-473Wx593H-461904510-grey-MODEL.jpg" alt="">                
+        <p class="text-center"><span class="company">SHEZONE </span> <br>
+            Open-Toe Heeled <br> 1299</p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Open-Toe Heeled</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wipe with a clean, dry cloth when needed</li>
+                        <li>Croslite upper & sole</li>
+                        <li>Heel height: 1.7 inches</li>
+                        <li>Package contains: 1 pair</li>
+                        <li>Product Code: 469538447014</li>
+                    </ul>
+                </p>
+                <p>Brand: SHEZONE</p>
+                <p>Model: 469538447014</p>
+                <p>Price : &#8377;<span class="price">1299</span> </p>
+                <!-- <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p> -->
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+
+    <script src="script.js"></script>
+    <footer id="footer">
+        <script id="replace_with_footer"></script>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script> 
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '0px',
+            duration: 1500,
+            delay: 300,
+        });
+
+        ScrollReveal().reveal('.menswear', { delay: 200, origin: 'right' });
+        ScrollReveal().reveal('.womenswear', { delay: 200, origin: 'left' });
+        ScrollReveal().reveal('.footwear', { delay: 200, origin: 'bottom' });
+
+    </script> 
+
+</body>
+</html>

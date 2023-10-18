@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background: linear-gradient(to bottom , #ffffff , #fff);
+        }
+
+        table , th , tr , td{
+            border-collapse: collapse;
+            border: 2px solid #000;
+            width: 50%;
+          }
+          
+          table th , td{
+            padding: 5px 10px 5px 10px ;
+          }
+        
+        .slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            height: 600px;
+        }
+        
+        .slider {
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 400px; 
+            transition: all .3s ease-in-out;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        .prev, .next {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 20px 20px;
+            background-color: #222746;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .next {
+            margin-left: 85%;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: #7f9ec0;
+        }
+
+        .top-sale-items {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .top-picksforyou{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide1{
+            background-color:#000 ;
+            background-image: url("https://images.unsplash.com/photo-1587133599421-40a3cd84831b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbXB1dGVyJTIwbmlnaHR8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .slide2{
+            background-image: url("https://s.tmimgcdn.com/scr/1200x750/222600/headphone-sale-facebook-cover-web-banner-template_222606-original.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide3{
+            background-color: #000;
+            background-image: url("https://m.media-amazon.com/images/S/aplus-media/vc/ebb3908b-488c-4ded-8adc-bdc74908b35d.__CR0,0,650,350_PT0_SX650_V1___.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .top-sale .item .text-center , .top-picks .item .text-center {
+            font-size: 1.15rem;
+            left:15px;
+            bottom: 0;
+        }
+
+        .top-sale , .top-picks  {
+            margin-left: 80px;
+        }
+
+        .top-sale h2 , .top-picks h2{
+            position:relative;
+            margin: 40px 0 0 100px;
+        }
+        .company {
+            color: #b19975;
+            font-size: 1.1rem;
+        }
+
+        .item{
+            width: 200px;
+            height: 250px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <script id="replace_with_navbar"></script>
+
+    <div class="slide-container" style="margin-top: -25px;">
+        <div class="slider">
+            <div class="slide slide1">
+
+            </div>
+            <div class="slide slide2">
+                
+            </div>
+            <div class="slide slide3">
+                
+            </div>
+        </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+
+    <div class="top-sale">
+        <h2>Electronics</h2>
+        <div class="top-sale-items">
+        <div class="col-6 col-sm-4 col-md-2 item sale1">
+            <img style="width: 90%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/kzygpzk0/headphone/g/t/y/-original-imagbugsg3k5nef4.jpeg?q=70" alt="">
+            <p class="text-center">boAt Airdopes 181 <br> <b>&#8377; 1,099</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: boAt Airdopes 181</p>
+                    <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>With Mic:Yes
+                                Bluetooth version: 5.2
+                                Wireless range: 10 m
+                                With Mic: Yes
+                                Bluetooth Version: 5.2
+                                Wireless Range: 10m
+                                Battery Time: Upto 20 Hours
+                                ASAP Charge: 10 mins charge= 90 mins playback</li>
+                        </ul>
+                    </p>
+                    <p>Brand: BOAT</p>
+                    <p>Model: AP4321SD2</p>
+                    <p>Price : &#8377;<span class="price">1099</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> 
+                        It's the new year and a time for the Vibe of Freshness, with Airdopes 181 TWS earbuds. The 10mm drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled mics help you to be heard crystal clear across voice calls. The addition of BEAST? Mode makes the low latency experience a reality for your gaming and entertainment sessions. </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>        
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 60%;margin-top:10px" src="https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/c/n/r/-original-imagtwb72zgxhhhe.jpeg?q=70" alt="">                
+            <p class="text-center">Boult Audio ProBass <br> <b>&#8377; 1,199</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Boult Audio ProBass </p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>With Mic:Yes
+                                Battery life: 40 hrs
+                                Environmental Noise Cancellation | Pro+ Calling Mic Technology
+                                Unstoppable 40 hrs Battery Life
+                                Type-C Fastest Charging | 10 mins Charge = 15 hrs Playtime
+                                Fastest Pairing with the latest Bluetooth 5.2 technology
+                                Soft Silicone Band | In-line controls | IPX5 Water Resistant</li>
+                        </ul>
+                    </p>
+                    <p>Brand: BOULT</p>
+                    <p>Model: AP452311SD2</p>
+                    <p>Price : &#8377;<span class="price">1199</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> 
+                        Let the beats guide you as you live the rhythm with the Boult F Charge neckband. Experience the powerful Extra Bass technology, delivering deep and resonant tones that take your music to new heights. With its Environmental Noise Cancellation technology, enjoy uninterrupted audio clarity in any environment. The IPX5 water-resistant design ensures durability and worry-free use during workouts or outdoor activities. With an impressive 40 hours of playtime and a quick 10-minute charge providing 15 hours of playback, you can enjoy your favorite tunes without breaks. Stay connected with Bluetooth 5.2 and effortlessly control your music and calls with the inline controls.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 60%;margin-top:15px" src="https://rukminim2.flixcart.com/image/416/416/xif0q/headphone/8/n/8/-original-imagj94gztmmmgty.jpeg?q=70" alt="">                
+            <p class="text-center">Skullcandy Hesh ANC Bluetooth Headset <br> <b>&#8377; 11,399</b> </p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Skullcandy Hesh ANC Bluetooth Headset</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>With Mic:Yes
+                                Connector type: Wireless & 3.5 mm
+                                Bluetooth version: 5.0
+                                Wireless range: 10 m
+                                Charging time: Rapid Charge Rating (10 min = x hours) 3H Charge Time (hours) - 1H 54 m
+                                Active Noise Cancelation - Blocks out background noise</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Skullcandy</p>
+                    <p>Model: ASP4521SD2</p>
+                    <p>Price : &#8377;<span class="price">11399</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em>Let the beats guide you as you live the rhythm with the Boult F Charge neckband. Experience the powerful Extra Bass technology, delivering deep and resonant tones that take your music to new heights. With its Environmental Noise Cancellation technology, enjoy uninterrupted audio clarity in any environment. The IPX5 water-resistant design ensures durability and worry-free use during workouts or outdoor activities. With an impressive 40 hours of playtime and a quick 10-minute charge providing 15 hours of playback, you can enjoy your favorite tunes without breaks. Stay connected with Bluetooth 5.2 and effortlessly control your music and calls with the inline controls.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/kxnl6kw0/mouse/5/8/m/wireless-gaming-mouse-rechargeable-500-mah-battery-upto-3200-dpi-original-imaga2da9yxvenhc.jpeg?q=70" alt="">                
+            <p class="text-center">Backlit Wireless mouse <br> <b>&#8377; 699</b> </p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Backlit RGB Wireless mouse</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Wireless
+                                For Gaming
+                                Interface: 2.4GHz Wireless
+                                Optical Mouse</li>
+                        
+                        </ul>
+                    </p>
+                    <p>Brand: Mouse</p>
+                    <p>Model: AP4521SD2</p>
+                    <p>Price : &#8377;<span class="price">699</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> It gives you multiple choices to set the sensitivity parameters suiting your style in best way from 1200-2400-3200 DPI. • 6-COLOR LED LIGHT?6 different colors LED light that changes while in use, makes your mouse multi-colored and cool colorful.Note: LED lights change colors automatically, and will not stay in one color, it will change regularly with 6 colors. </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item sale1">
+            <img style="width: 90%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/jyxaw7k0/speaker/home-audio-speaker/x/n/k/f-d-f6000x-original-imafg5cvts3zezta.jpeg?q=70" alt="">
+            <p class="text-center">Bluetooth Home Theatre <br> <b>&#8377; 13,999</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Bluetooth Home Theatre </p>
+                    <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Power Output(RMS): 270 W
+                                Power Source: AC Adapter
+                                Wireless music streaming via Bluetooth
+                                Memory Card Slot
+                                Powerful 135W output to provide the best Home Theatre experience
+                                Multiple connectivity - Bluetooth, FM, AUX & USB</li>
+                            
+                        </ul>
+                    </p>
+                    <p>Brand: Home Theatre</p>
+                    <p>Model: AP4521SD4</p>
+                    <p>Price : &#8377;<span class="price">13999</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> NA</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
+
+<div class="top-picks">
+    <h2>Best Laptops</h2>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 90%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/q/d/x/-original-imagufyhphszz3yr.jpeg?q=70" alt="">
+        <p class="text-center">Lenovo IdeaPad Slim 5 <br> <b>&#8377; 68,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Lenovo IdeaPad Slim 5</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Stylish & Portable Thin and Light Laptop
+                            14 Inch WUXGA, IPS, 300nits Anti-glare, 45% NTSC, TUV Low Blue Light
+                            Light Laptop without Optical Disk Drive</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: Lenovo</p>
+                <p>Model: A2M521SD2</p>
+                <p>Price : &#8377;<span class="price">68999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> NA</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 95%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/9/g/9/inspiron-3520-laptop-dell-original-imagtegwwhwk9ghn.jpeg?q=70" alt="">                
+        <p class="text-center">DELL Inspiron 15 3520  <br> <b>&#8377; 61,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: DELL Inspiron 15 3520 </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Core i5 12th Gen Core i5 - (16 GB/512 GB SSD/Windows 11 Home) Inspiron 3520 Laptop  (15.6 inch, Platinum Silver, 1.65 kg, With MS Office)</li>
+                        <li>Preloaded with MS Office
+                            Light Laptop without Optical Disk Drive
+                            15.6 inch FHD 1920x1080, Non-Touch, AG, WVA, LED-Backlit, Narrow Border Display</li>
+                    </ul>
+                </p>
+                <p>Brand: DELL</p>
+                <p>Model: A64521A2D2</p>
+                <p>Price : &#8377;<span class="price">61999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> NA </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 75%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/0/s/16-s0095ax-gaming-laptop-hp-original-imagsn4eepm7trbu.jpeg?q=70" alt="">                
+        <p class="text-center">HP Victus Ryzen 7 <br> <b>&#8377; 79,499</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: HP Victus Ryzen 7</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Ryzen 7 Octa Core 7840HS - (16 GB/512 GB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050) 16-s0095AX Gaming Laptop  (16.1 Inch, Performance Blue, 2.29 kg, With MS Office)</li>
+                        <li>16.1 Inch Full HD, Refresh Rate: 144 Hz, Response Time: 7 ms, IPS, Micro Edge, Anti Glare, Low Blue Light, Brightness: 250nits, Color Gamut: 100% sRGB
+                            Light Laptop without Optical Disk Drive
+                            Preloaded with MS Office</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: HP</p>
+                <p>Model: AN4521SD2</p>
+                <p>Price : &#8377;<span class="price">79499</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> NA</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 85%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/v/c/a/-original-imagfdfpnjjpdhq2.jpeg?q=70" alt="">                
+        <p class="text-center">APPLE 2022 MacBook AIR <br> <b>&#8377; 1,18,999</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: APPLE 2022 MacBook AIR</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>MacBook AIR M2 - (8 GB/512 GB SSD/Mac OS Monterey) MLY23HN/A  (13.6 Inch, Starlight, 1.24 kg)</li>
+                        <li>Stylish & Portable Thin and Light Laptop
+                            13.6 Inch Liquid Retina display, LED-backlit display with IPS technology, 500 nits brightness, Wide colour (P3), True Tone technology
+                            Light Laptop without Optical Disk Drive
+                            </li>
+                    </ul>
+                </p>
+                <p>Brand: Apple</p>
+                <p>Model: AS4521SD2</p>
+                <p>Price : &#8377;<span class="price">189999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>
+                    Charged in a blazing-fast speed with the next-level M2 chip, this redesigned Apple’s notebook comes with mind blowing and has an excellent battery backup that can last up to 18 hours, which comes with an aluminium enclosure. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 85%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/z/h/u/-original-imagqdrxmhjyhkxs.jpeg?q=70" alt="">                
+        <p class="text-center">ASUS Vivobook S 14 <br> <b>&#8377; 62,999</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: ASUS Vivobook S 14</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>ASUS Vivobook S 14 Intel EVO H-Series Core i5 12th Gen 12500H - (8 GB/512 GB SSD/Windows 11 Home) S3402ZA-LY522WS Thin and Light Laptop  (14 inch, Indie Black, 1.50 Kg)</li>
+                        <li>Stylish & Portable Thin and Light Laptop
+                            14 inch FHD+ (1920 x 1200, WUXGA) 16:10 aspect ratio, LED Backlit LCD, IPS-level Panel, Anti-glare display, 300nits Brightness, 85�% Screen-to-body ratio
+                            Finger Print Sensor for Faster System Access
+                            Light Laptop without Optical Disk Drive</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: ASUS</p>
+                <p>Model: AS5A351SD2</p>
+                <p>Price : &#8377;<span class="price">62999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>With the remarkable Vivobook S 14 laptop's mind-blowing functionalities and peak performance, harness your potential and bring it to light. This laptop's 3200 MHz DDR4 RAM and 12th Gen Intel Core H-series CPU make multitasking and promoting smooth performance possible. Also, this laptop is powered by PCIe Gen 4 SSDs, which can transport files at a speed of up to 3.5 Gbps.  </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="top-picks">
+    <h2>Top Picks For You</h2>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 70%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/xif0q/smartwatch/i/5/v/3-5-sigma-sillicone-android-ios-beatxp-yes-original-imagsy5ehsnxnqy3.jpeg?q=70" alt="">
+        <p class="text-center">beatXP Sigma <br> <b>&#8377; 1,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: beatXP Sigma</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>With Call Function
+                            Touchscreen
+                            Fitness & Outdoor</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: Smart</p>
+                <p>Model: AS45221SD9</p>
+                <p>Price : &#8377;<span class="price">1999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    Step into a world of unrivalled convenience and luxury with the extraordinary beatXP Sigma smartwatch. Prepare to be captivated by its dazzling 1.38� round Ultra HD Display, which boasts an Always On Display feature that keeps you connected in the most stylish and seamless way imaginable. The 60Hz Refresh rate ensures every interaction feels smooth and effortless, complementing the advanced features and sleek design that make this an absolute must-have smartwatch for men and women.  </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/allinone-desktop/s/q/s/assembled-pc-assembld-original-imagmxptgjcw7vgx.jpeg?q=70" alt="">                
+        <p class="text-center">ASSEMBLD 2000 Core i3 <br> <b>&#8377; 13,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: ASSEMBLD 2000 Core i3</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Core i3 (8 GB DDR3/1 TB/128 GB SSD/Windows 11 Home/20 Inch Screen/ASSEMBLED PC) with MS Office  (Black, 45 cm x 55 cm x 15 cm, 5 kg)</li>
+                        <li>Windows 11 Home
+                            Intel Core i3
+                            HDD Capacity 1 TB
+                            RAM 8 GB DDR3
+                            20 inch Display
+                            yes</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: PC</p>
+                <p>Model: AP4451AD2</p>
+                <p>Price : &#8377;<span class="price">13999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> This Computer is Assembled Computer build with as per available Cabinet, power supply, LED Monitor, Keyboard Mouse and other Accessories. The PC comes with Trial version 10 and Microsoft Office. There is no DVD writer in this PC. There is no warranty for software you can claim for only hardware parts, no door-to-door service available, you can use this pc for Office, Online Study, Programming or Gamming purpose (Note before buying please read warranty policy carefully) </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/klzhq4w0/router/l/n/j/archer-c6-v3-tp-link-original-imagyzebqnmp67y7.jpeg?q=70" alt="">                
+        <p class="text-center">TP-Link Archer <br> <b>&#8377; 2,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: TP-Link Archer</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>C6 MU-MIMO Gigabit 1200 Mbps Wireless Router  (Black, Dual Band)</li>
+                        <li>Type: Wireless Without Modem
+                            1200 Mbps Speed
+                            Frequency: 2.4 GHz, 5 GHz
+                            External Antenna</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: Router</p>
+                <p>Model: AA45125AD2</p>
+                <p>Price : &#8377;<span class="price">2999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    Enjoy high speeds for HD gaming, browsing, and more with the TP-Link Archer C6 1200 Mbps Router’s 2.4 GHz and 5 GHz bands. Its WPA3 Wi-Fi security protocol helps improve cybersecurity on your network and ensure secure encryption for your Wi-Fi password. Also, this router can help protect your home network from brute-force attacks. Moreover, this router is equipped with four external antennas to ensure adequate connectivity throughout your home.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/smartwatch/y/e/n/46-99-marv-ace-android-ios-beatxp-yes-original-imagsy6rqnnfs6ah.jpeg?q=70" alt="">                
+        <p class="text-center">beatXP Marv <br> <b>&#8377; 1,799</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: beatXP Marv</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Ace 1.85'' HD Always On Display BT Calling, 100+ Sports Modes with IP67 Smartwatch  (Persian Blue Strap, Free Size)</li>
+                        <li>With Call Function
+                            Touchscreen
+                            Fitness & Outdoor</li>
+                    </ul>
+                </p>
+                <p>Brand: Smartwatch</p>
+                <p>Model: AA4521SD10</p>
+                <p>Price : &#8377;<span class="price">1799</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> The beatXP Marv Ace smartwatch features a large 1.85" Ultra HD Always On Display and has a remarkably fast 60Hz Refresh rate. The watch provides effortless connectivity with a trendy appearance. With the innovative EzyPair� Technology, you can now answer calls right from your wrist. No more fumbling for your phone or struggling to take calls on the go.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 100%;" src="https://rukminim2.flixcart.com/image/416/416/k2urhjk0/allinone-desktop/d/v/c/assembled-aszi35004gb-original-imafm3vqsyku9ken.jpeg?q=70" alt="">                
+        <p class="text-center">Assembled Intel Core i3  <br> <b>&#8377; 9,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Assembled Intel Core i3 </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Intel Core i3 (4 GB DDR3/500 GB/Windows 10 Pro/15.1 Inch Screen/ASZI35004GB)  (Black)</li>
+                        <li>Windows 10 Pro
+                            Intel Core i3
+                            HDD Capacity 500 GB
+                            RAM 4 GB DDR3
+                            15.1 inch Display</li>
+            
+                    </ul>
+                </p>
+                <p>Brand: AZI</p>
+                <p>Model: AP45121SD2</p>
+                <p>Price : &#8377;<span class="price">9999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    This Computer is Assemebled Computer build with as per available Cabinet and power supply. The PC comes with Trail Window 10 or Trail Windows 7 and Microsoft Office. There is no DVD writer in this PC. You can use this pc for Office, Online Study, Programming or Gamming purpose (Note before buying please read warranty policy carefully)</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="script.js"></script>
+    <script id="replace_with_footer"></script>
+</body>
+</html>

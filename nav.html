@@ -1,0 +1,64 @@
+<nav>
+    <h2 class="logoo">Assurance<span class="special">MART</span></h2>
+    <div class="search">
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Search Products ">
+                <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="nav-list">
+        <ul>
+            <li class="main" type="none">
+                <a href=""><i class="fa-regular fa-user"></i>Signin</a>
+                <a href=""><i class="fa-solid fa-location-dot"></i>Location</a>
+                <button class="opencart" onclick="open_cart()"><i class="fa-solid fa-cart-plus"></i>Cart</button>
+            </li>
+        </ul>
+        <ul class="list2">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <button class="bar" onclick="open_sidebar()"><i class="fa-solid fa-bars"></i></button>       
+    </div>
+    <div class="side-bar">
+        <button class="close" onclick="close_sidebar()"><i class="fa-regular fa-circle-xmark"></i></button>
+        <ol type="none">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ol>
+    </div>
+
+
+    <div id="my-cart">
+        <button class="close_cart" onclick="close_cart()"><i class="fa-regular fa-circle-xmark"></i></button>
+        <h2>Your Shopping Cart</h2>
+        <table id="table-data">
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Remove</th>
+                <th>Price</th>
+            </tr>
+        </table>
+        <hr>
+        <div>
+            <p id="total-price">Total : 0</p>
+            <button class="checkout">checkout</button>
+        </div>
+    </div>
+</nav>
+<div id="allcategories" style="margin-top: 80px;">
+    <h3 style="font-weight: 1000;">Categories</h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mobiles.html">Mobiles & Tablets</a></li>
+        <li><a href="electronics.html">Electronics</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="tvs.html">TVs & Appliances</a></li>
+        <li><a href="furniture.html">Furniture</a></li>
+    </ul>
+</div>

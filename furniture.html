@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background: linear-gradient(to bottom , #ffffff , #fff);
+        }
+
+        table , th , tr , td{
+            border-collapse: collapse;
+            border: 2px solid #000;
+            width: 50%;
+          }
+          
+          table th , td{
+            padding: 5px 10px 5px 10px ;
+          }
+        
+        .slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            height: 600px;
+        }
+        
+        .slider {
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 400px; 
+            transition: all .3s ease-in-out;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        .prev, .next {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 20px 20px;
+            background-color: #222746;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .next {
+            margin-left: 85%;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: #7f9ec0;
+        }
+
+        .top-sale-items {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .top-picksforyou{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide3{
+            background-color:#000 ;
+            background-image: url("https://img.freepik.com/premium-photo/modern-living-room-with-sofa_445983-2767.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide1{
+            background-image: url("https://roomconcepts.com/CustomBuiltFurniture/CustomMadeBedroomFurniture.jpeg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide2{
+            background-color: #000;
+            background-image: url("https://pictureserver.net/images/pic/5e/24/english_src_mobilebanner_picid_8095_image.jpg?ver=1");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .top-sale .item .text-center , .top-picks .item .text-center {
+            font-size: 1.15rem;
+            left:15px;
+            bottom: 0;
+        }
+
+        .top-sale , .top-picks  {
+            margin-left: 80px;
+        }
+
+        .top-sale h2 , .top-picks h2{
+            position:relative;
+            margin: 40px 0 0 100px;
+        }
+        .company {
+            color: #b19975;
+            font-size: 1.1rem;
+        }
+
+        .item{
+            width: 200px;
+            height: 250px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <script id="replace_with_navbar"></script>
+
+    <div class="slide-container" style="margin-top: -25px;">
+        <div class="slider">
+            <div class="slide slide1">
+
+            </div>
+            <div class="slide slide2">
+                
+            </div>
+            <div class="slide slide3">
+                
+            </div>
+        </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+
+    <div class="top-sale">
+        <h2>BedRoom Furniture</h2>
+        <button class="btn3">View All</button>
+        <div class="top-sale-items">
+        <div class="col-6 col-sm-4 col-md-2 item sale1">
+            <img style="width: 80%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/xif0q/dressing-table/9/w/q/-original-imagtjkfaqyzua3z.jpeg?q=70" alt="">
+            <p class="text-center">SPACEWOOD dressing-table <br> <b>&#8377;13,099</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: SPACEWOOD dressing-table </p>
+                    <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Storage Included
+                                W x H x D: 70 cm x 180 cm x 40 cm (2 ft 3 in x 5 ft 10 in x 1 ft 3 in)
+                                Mirror W x H: 45 mm x 115.5 mm
+                                Finish Type: Woodpore | Finish Color: Brown
+                                Knock Down - Delivered in non-assembled pieces, installation by service partner</li>
+                        </ul>
+                    </p>
+                    <p>Brand: SPACEWOOD</p>
+                    <p>Model: AT43225SD2</p>
+                    <p>Price : &#8377;<span class="price">13099</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> 
+                        
+                        Important Note
+                        Cancellation NOT allowed for this product after 24 hrs of order booking. </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>        
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;margin-top:10px" src="https://rukminim2.flixcart.com/image/416/416/xif0q/bed/h/0/s/-original-imagpppw42tj4kac.jpeg?q=70" alt="">                
+            <p class="text-center">SPACEWOOD King Box Bed <br> <b>&#8377;24,199</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: SPACEWOOD King Box Bed </p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Bed Material Subtype: Particle Board
+                                W x H x D: 189 cm x 90 cm x 221 cm (6 ft 2 in x 2 ft 11 in x 7 ft 3 in)
+                                Storage Type: Box
+                                Recommended Mattress Size: Length= 78 inches x Width = 72 inches
+                                Delivery Condition: Knock Down - Delivered in non-assembled pieces, installation by service partner</li>
+                        </ul>
+                    </p>
+                    <p>Brand: SPACEWOOD</p>
+                    <p>Model: ASD452311SD2</p>
+                    <p>Price : &#8377;<span class="price">29199</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> 
+                        
+                        Spacewood Mayflower Bed is the latest offering from Spacewood - the house of contemporary furniture maker. It gives aesthetic appeal to your bedroom and refreshes your mood. Its specialty is its bookcase headboard which serves as an easy access to users. Bring a new member into your family. </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;margin-top:15px" src="https://rukminim2.flixcart.com/image/416/416/jjubki80/wardrobe-closet/y/w/7/particle-board-521-spacewood-natural-wenge-original-imaf7bvj8mgqsyq4.jpeg?q=70" alt="">                
+            <p class="text-center">SPACEWOOD 2 door wardrobe <br> <b>&#8377;12,399</b> </p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: SPACEWOOD 2 door wardrobe </p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Primary Material: Engineered Wood
+                                Width x Height: 83.8 cm x 191.8 cm (2 ft 8 in x 6 ft 3 in)
+                                Number Of Doors: 2
+                                Number Of Shelves: 3
+                                Weight: 79
+                                Delivery Condition: Knock Down - Delivered in non-assembled pieces, installation by service partner</li>
+                        </ul>
+                    </p>
+                    <p>Brand: SPACEWOOD</p>
+                    <p>Model: ADP4621SD2</p>
+                    <p>Price : &#8377;<span class="price">12399</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em>
+                        Important Note
+                        Cancellation NOT allowed for this product after 24 hrs of order booking.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/wardrobe-closet/d/n/k/-original-imagu6zqy97uhthz.jpeg?q=70" alt="">                
+            <p class="text-center"> Wood 5 Door Wardrobe <br> <b>&#8377;24,699</b> </p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product:  Wood 5 Door Wardrobe</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Primary Material: Engineered Wood
+                                Width x Height: 2010 mm x 1820 mm (6 ft 7 in x 5 ft 11 in)
+                                Number Of Doors: 5
+                                Number Of Shelves: 7
+                                Weight: 175
+                                Delivery Condition: Knock Down - Delivered in non-assembled pieces, installation by service partner</li>
+                        </ul>
+                    </p>
+                    <p>Brand: WOOD</p>
+                    <p>Model: AP45221SD2</p>
+                    <p>Price : &#8377;<span class="price">24699</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> Important Note
+                        Cancellation NOT allowed for this product after 24 hrs of order booking.
+                    </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item sale1">
+            <img style="width: 80%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/xif0q/side-table/d/5/x/33-rosewood-sheesham-44-2-12-9-mh-bst-wl-bedside-table-meera-original-imagtzzcbghdz2x7.jpeg?q=70" alt="">
+            <p class="text-center">Solid Wood Bedside Table  <br> <b>&#8377;3,999</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Solid Wood Bedside Table </p>
+                    <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>Square
+                                Width x Height: 44.2 x 50.8 cm (1 ft 5 in x 1 ft 8 in)
+                                Suitable For: Bedroom Furniture
+                                Pre Assembled (Ready to Use)</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Meera</p>
+                    <p>Model: AP4521SA124</p>
+                    <p>Price : &#8377;<span class="price">3999</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> 
+                        You can experience the beautiful colours coming to life on this TV, thanks to its array of colours up to 90% as per the DCI-P3 standard. The Dolby Vision brings you a theatrical visual experience in the comfort of your home. This TV offers a wide range of gaming features like Gaming in Dolby Vision, Game Master, Game Bar, ALLM Mode, and much more to elevate your gaming experience. The Dolby Atmos and DTS Virtual:X, together enhance the audio and provide next-level immersion. You can get access to numerous shows, movies, games, and more on this Google TV.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
+
+<div class="top-picks">
+    <h2>Furnishing</h2>
+    <button class="btn3">View All</button>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 75%;" src="https://rukminim2.flixcart.com/image/416/416/kjg1jm80-0/bedsheet/i/5/b/3d-new-brown-pati-101-3d-new-brown-pati-101-flat-goodrik-original-imafzy9frv9qt8rn.jpeg?q=70" alt="">
+        <p class="text-center">Double 3D Printed Flat Bedsheet <br> <b>&#8377; 299</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Double 3D Printed Flat Bedsheet</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Flat (L x W): 225 cm x 220 cm
+                            Material: Cotton
+                            Includes: Number of Bedsheets: 1
+                            Thread Count: 140
+                            Color: Brown</li>
+                    </ul>
+                </p>
+                <p>Brand: Bedsheet</p>
+                <p>Model: A2MM21SD2</p>
+                <p>Price : &#8377;<span class="price">299</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> NA.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 75%;" src="https://rukminim2.flixcart.com/image/416/416/kp78e4w0/bedsheet/6/p/n/red-heart-us-1100heart-flat-us-decor-hub-original-imag3hhjd6cdhfkh.jpeg?q=70" alt="">                
+        <p class="text-center">Microfiber King 3D Printed  <br> <b>&#8377;399</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Microfiber King 3D Printed </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Flat (L x W): 225 cm x 223 cm
+                            Material: Microfiber
+                            Includes: Number of Bedsheets: 1
+                            Thread Count: 137
+                            Color: Red</li>
+                    </ul>
+                </p>
+                <p>Brand: Bedsheet</p>
+                <p>Model: A24521A2D2</p>
+                <p>Price : &#8377;<span class="price">399</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> NA. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 75%;" src="https://rukminim2.flixcart.com/image/416/416/kufuikw0/pillow/h/j/4/11-microfibre-solid-sleeping-pillow-2-7329183-sleepwell-original-imag7kkq5af2h5hq.jpeg?q=70" alt="">                
+        <p class="text-center">Sleepwell Pillow Set <br> <b>&#8377;699</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Sleepwell Pillow Set</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Filling Material: Microfibre
+                            Size: 61 cm x 40 cm
+                            Type: Sleeping Pillow
+                            Suitable Location: Bed Room
+                            </li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: Sleepwell</p>
+                <p>Model: A64521SD2</p>
+                <p>Price : &#8377;<span class="price">699</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    
+                Smooth and luxurious, these pillows have a microfibre shell The hollow siliconized polyester fibre stuffing gives these pillows a good bounce and loft. They are suitable for both back sleepers and stomach sleepers. Enhance the aesthetics of your bedroom</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 65%;" src="https://rukminim2.flixcart.com/image/416/416/kp8ntzk0/table-cover/z/c/i/table-cover-1-tp-silver-4-rarebit-original-imag3gszrftbaxfu.jpeg?q=70" alt="">                
+        <p class="text-center">StarsOne Solid 4 Seater Table Cover  <br> <b>&#8377;299</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: StarsOne Solid 4 Seater Table Cover </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Table Cloth
+                            4 Seater Table Cover
+                            Multicolor
+                            Solid Pattern
+                            Pack of 1
+                            </li>
+                    </ul>
+                </p>
+                <p>Brand: StarsOne</p>
+                <p>Model: AS45211SD2</p>
+                <p>Price : &#8377;<span class="price">299</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>
+                    We comprehend the way of life of our clients and to improve the excellence of your drawing room/Lounge area, we have made some superb table covers, created out utilizing high grade quality P.V.C materials and numerous other material which makes them excellent and solid, the shading mix and plan of these table cover are laudable and looks exceptionally rich, exquisite and alluring which upgrades and results into a smooth vibe, these table covers are impervious to unpleasant dealing with and are not difficult to wipe and clean, It likewise ensures your table surface, no more stains on your rectangular table, Indian made. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 65%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/blanket/j/d/p/soft-microfibre-500-gsm-heavy-winter-quilt-lv-500-hk-mr-original-imagk7u8sqqxsgmh.jpeg?q=70" alt="">                
+        <p class="text-center">Linenovation Solid King Comfort <br> <b>&#8377;2,999</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product:Linenovation Solid King Comfort</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Type: Comforter
+                            Size: 254 cm x 228.6 cm
+                            Ideal Usage: Heavy Winter
+                            Pack of: 1
+                            Weight: 4000 g</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: Linenovation</p>
+                <p>Model: AS5A351SD2</p>
+                <p>Price : &#8377;<span class="price">2999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>
+                    Soft Microfibre 500 GSM Winter Heavy Quilt , Rajai King Bed Comforter Blanket, Super Soft For Heavy Winter King Bed Blanket for Winter Quilt, Duvet for all season, White Solid  </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="top-picks">
+    <h2>Living Room Furniture</h2>
+    <button class="btn3">View All</button>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/office-study-chair/d/w/k/1-natural-fiber-64-newyork-hb-black-green-soul-115-original-imagsap3hmwfkuzz.jpeg?q=70" alt="">
+        <p class="text-center">High Back Ergonomic |Home, Office  <br> <b>&#8377;8,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: High Back Ergonomic |Home, Office</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Wheels, Seat Lock, Swivel, Armrest, Adjustable Seat Height
+                            W x H: 64 cm x 115 cm (2 ft 1 in x 3 ft 9 in)
+                            Frame Material: Metal
+                            Upholstery Type: Cushion
+                            DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+                    </ul>
+                </p>
+                <p>Brand: Green Soul</p>
+                <p>Model: AS45220SD9</p>
+                <p>Price : &#8377;<span class="price">8999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    Green Soul New York High Back Ergonomically designed Mesh Office Chair gives correct posture & provides total support to your body. The breathable mesh keeps your back cool & comfortable all day long.  </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/jhs0o7k0/recliner/c/b/u/brown-pu-leatherette-fauxbrown-westido-original-imaf5q3gh9xyy3ec.jpeg?q=70" alt="">                
+        <p class="text-center"> Leatherette Manual Recliners <br> <b>&#8377;11,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product:  Leatherette Manual Recliners</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Material: Leatherette
+                            3 Reclining Positions
+                            Filling Material: Foam
+                            W x H x D: 100 cm x 83.5 cm x 91.5 cm (3 ft 3 in x 2 ft 8 in x 3 ft)
+                            Delivery Condition: DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: WESTIDO</p>
+                <p>Model: AP4451AA2</p>
+                <p>Price : &#8377;<span class="price">11999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> It might take the Foam and fibre 24 - 48 hours to come back to normal position due to tight packing. The product might emit smell of (cargo) packing which will disappear after 24 to 48 hours  </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 100%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/tv-entertainment-unit/6/m/g/-original-imagrgu24xwgyaqt.jpeg?q=70" alt="">                
+        <p class="text-center"> TV Entertainment Unit <br> <b>&#8377;8,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product:  TV Entertainment Unit</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Material: Particle Board
+                            W x H x D: 180 Cm x 54 cm x 40 cm (5 ft 10 in x 1 ft 9 in x 1 ft 3 in)
+                            Ideal TV Size: 70 inch
+                            Number of Drawers: 2, Number of Open Shelves: 3, Number of Closed Shelves: 0
+                            Delivery Condition: Knock Down - Delivered in non-assembled pieces, installation by service partner</li>
+                        
+                    </ul>
+                </p>
+                <p>Brand: SPACEWOOD</p>
+                <p>Model: AA48125AD2</p>
+                <p>Price : &#8377;<span class="price">8999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    NA.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/sofa-sectional/d/s/1/-original-imagtjkjhhrxfzu6.jpeg?q=70" alt="">                
+        <p class="text-center">Black & Titanium Grey Fabric 6 Seater Sofa <br> <b>&#8377;49,299</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Black & Titanium Grey Fabric 6 Seater Sofa</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Upholestry: Cotton
+                            Filling Material: Foam
+                            W x H x D: 269.24 cm x 77.47 cm x 186.69 cm (8 ft 10 in x 2 ft 6 in x 6 ft 1 in)
+                            Right Facing
+                            Delivery Condition: DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+                    </ul>
+                </p>
+                <p>Brand: Pigeon</p>
+                <p>Model: AA6521SD10</p>
+                <p>Price : &#8377;<span class="price">49299</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>Trevi gives you the bliss range of sofas. 5 seater & 6 seater. Our sofa has the best colour options and it adds a style statement to your home. The A Grade foam used in our sofa gives you excellent comfort for the long run. The solid wood frame provides a market leading class of sturdiness to the sofa. Preferred usage: Living room, Hall.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 100%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/sofa-sectional/v/2/g/right-facing-grey-brown-jute-no-lf-25-brownie-grey-brown-original-imagkyyxk27agkrf.jpeg?q=70" alt="">                
+        <p class="text-center"> Fabric 3 Seater Sofa    <br> <b>&#8377;8,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product:  Fabric 3 Seater Sofa   </p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>Upholestry: Jute
+                            Filling Material: Foam
+                            W x H x D: 182.88 cm x 86.36 cm x 71.12 cm (6 ft x 2 ft 10 in x 2 ft 4 in)
+                            Symmetrical
+                            Delivery Condition: DIY - Basic assembly to be done with simple tools by the customer, comes with instructions.</li>
+            
+                    </ul>
+                </p>
+                <p>Brand: WAKESURE</p>
+                <p>Model: AP45121SD2</p>
+                <p>Price : &#8377;<span class="price">8999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    
+                NA.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+    <script src="script.js"></script>
+    <script id="replace_with_footer"></script>
+</body>
+</html>

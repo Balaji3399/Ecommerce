@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles & Tablets</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d63b211e4f.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background: linear-gradient(to bottom , #ffffff , #fff);
+        }
+
+        table , th , tr , td{
+            border-collapse: collapse;
+            border: 2px solid #000;
+            width: 50%;
+          }
+          
+          table th , td{
+            padding: 5px 10px 5px 10px ;
+          }
+        
+        .slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            height: 600px;
+        }
+        
+        .slider {
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 400px; 
+            transition: all .3s ease-in-out;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+        
+        .prev, .next {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 20px 20px;
+            background-color: #222746;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .next {
+            margin-left: 85%;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: #7f9ec0;
+        }
+
+        .top-sale-items {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .top-picksforyou{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide1{
+            background-color:#e7ebee ;
+            background-image: url("https://images.mobileshop.eu/1386755279/blog-post/Top-10-smartphones-2013-1.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .slide2{
+            background-image: url("https://previews.123rf.com/images/maxxyustas/maxxyustas1409/maxxyustas140900007/31430464-mobile-devices-laptop-smartphone-and-tablet-pc-3d.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .slide3{
+            background-image: url("https://thestandardcio.com/wp-content/uploads/sites/2/2022/09/Tablets-y-smartphones.jpg");
+            background-position: center ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .top-sale .item .text-center , .top-picks .item .text-center {
+            font-size: 1.15rem;
+            left:15px;
+            bottom: 0;
+        }
+
+        .top-sale , .top-picks  {
+            margin-left: 80px;
+        }
+
+        .top-sale h2 , .top-picks h2{
+            position:relative;
+            margin: 40px 0 0 100px;
+        }
+        .company {
+            color: #b19975;
+            font-size: 1.1rem;
+        }
+
+        .item{
+            width: 200px;
+            height: 250px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <script id="replace_with_navbar"></script>
+
+    <div class="slide-container" style="margin-top: -25px;">
+        <div class="slider">
+            <div class="slide slide1">
+
+            </div>
+            <div class="slide slide2">
+                
+            </div>
+            <div class="slide slide3">
+                
+            </div>
+        </div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+
+    <div class="top-sale">
+        <h2>Top Sale</h2>
+        <div class="top-sale-items">
+            <div class="col-6 col-sm-4 col-md-2 item items2">
+                <img style="width: 100%;float:inline-end" src="./Images/samsung.webp" alt="">
+                <p class="text-center">Samsung S23 Ultra 5G <br> <b>&#8377;1,14,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Samsung Galaxy S23 Ultra 5G</p>
+                        <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>12 GB RAM | 256 GB ROM
+                                    17.27 cm (6.8 inch) Quad HD+ Display
+                                    200MP + 10MP + 12MP + 10MP | 12MP Front Camera
+                                    5000 mAh Lithium Ion Battery
+                                    Qualcomm Snapdragon 8 Gen 2 Processor</li>
+                            </ul>
+                        </p>
+                        <p>Brand: Samsung</p>
+                        <p>Model: AP4521SD2</p>
+                        <p>Price : &#8377;<span class="price">114999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> 
+                            Get a smartphone for yourself that can detect your moods and react appropriately. The Samsung Galaxy Ultra's potent processor and advanced camera sensor can handle low light and noise reduction. The phone's Snapdragon 8 Gen 2 processor, which also provides a long battery life to carry you through even the busiest days, also enables quick gaming and video streaming. You can also launch Expert RAW to take high-resolution RAW photos that are vivid and packed with information. Moreover, Dynamic AMOLED 2X offers clear, brilliant details in both bright and low-light conditions. Additionally, to smooth up gaming and save power, the refresh rate is automatically optimised with 120 Hz technology.</p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 item items1">
+                <img style="width: 70%;" src="./Images/iphone.webp" alt="">                
+                <p class="text-center">IPhone 14 Pro <br> <b>&#8377; 65,999</b></p>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h3>Product Details</h3>
+                        <p>Product: Iphone 14 Pro</p>
+                        <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                        <p style="font-size: 1.5rem;">Highlights
+                            <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                                <li>128 GB ROM</li>
+                                <li>17.02 cm (6.7 inch) Super Retina XDR Display</li>
+                                <li>48MP + 12MP + 12MP | 12MP Front Camera</li>
+                                <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+                            </ul>
+                        </p>
+                        <p>Brand: Apple</p>
+                        <p>Model: AP4521SD2</p>
+                        <p>Price : &#8377;<span class="price">65999</span> </p>
+                        <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p>
+                        <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 60%;margin-top:15px" src="https://rukminim2.flixcart.com/image/416/416/ktop5e80/tablet/s/l/b/mk2k3hn-a-apple-original-imag6yy7wn9are6s.jpeg?q=70" alt="">                
+            <p class="text-center">APPLE iPad (9th Gen) <br> <b>&#8377; 29,999</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Iphone 14 Pro</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>64 GB ROM
+                                25.91 cm (10.2 inch) Display
+                                8 MP Primary Camera | 12 MP Front
+                                iOS 15 | Battery: Lithium Polymer
+                                Processor: A13 Bionic Chip with 64-bit Architecture</li>
+                            <li>17.02 cm (6.7 inch) Super Retina XDR Display</li>
+                            <li>48MP + 12MP + 12MP | 12MP Front Camera</li>
+                            <li>A16 Bionic Chip, 6 Core Processor Processor</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Apple</p>
+                    <p>Model: AP4521SD2</p>
+                    <p>Price : &#8377;<span class="price">29999</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> The iPhone 14 Pro has a new design with a smaller notch, which Apple calls the Dynamic Island. The Dynamic Island is a pill-shaped cutout at the top of the display that houses the front-facing camera and Face ID sensors. The Dynamic Island can also be used to display alerts and notifications.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/k6qsn0w0/tablet/3/q/z/lenovo-za5g0047in-original-imafp4w7ft7uyuqv.jpeg?q=70" alt="">                
+            <p class="text-center">Lenovo Tab M8 <br><b>&#8377;18999</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: Lenovo Tab M10</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>6 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                            <li>26.95 cm (10.61 inch) Full HD Display</li>
+                            <li>8.0 MP Primary Camera | 8 MP Front</li>
+                            <li>Android 12 | Battery: 7700 mAh</li>
+                            <li>Voice Call (Single Sim, Wifi, 4G LTE)</li>
+                            <li>Processor: Qualcomm Snapdragon SDM 6803</li>
+                        </ul>
+                    </p>
+                    <p>Brand: Lenovo</p>
+                    <p>Model: A64521SD2</p>
+                    <p>Price : &#8377;<span class="price">16999</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> You can elevate your visual experience with the Lenovo which comes with a 120 Hz 2K Super Display. The large screen allows you to browse through the web, enhance creativity, and launch apps effortlessly. Featuring a 33 W SUPERVOOC charge, this tablet can be charged instantly. The 8360 mAh Mega Battery enables uninterrupted performance with its long-lasting battery life. With 16 GB of Dynamic RAM and 256 GB of ROM, this laptop’s performance and speed are bound to blow your mind. </p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 item items1">
+            <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/x/j/-original-imagmkjfhzjhfhhe.jpeg?q=70" alt="">                
+            <p class="text-center">POCO X5 Pro 5G <br> <b>&#8377;19,999</b></p>
+            <div class="popup-container">
+                <div class="popup-content">
+                    <h3>Product Details</h3>
+                    <p>Product: POCO X5 Pro 5G</p>
+                    <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                    <p style="font-size: 1.5rem;">Highlights
+                        <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                            <li>8 GB RAM | 256 GB ROM</li>
+                            <li>16.94 cm (6.67 inch) Full HD+ Display</li>
+                            <li>108MP + 8MP + 2MP | 16MP Front Camera</li>
+                            <li>5000 mAh Battery</li>
+                            <li>Qualcomm Snapdragon 778G Processor</li>
+                        </ul>
+                    </p>
+                    <p>Brand: POCO</p>
+                    <p>Model: AA4521SD2</p>
+                    <p>Price : &#8377;<span class="price">19999</span> </p>
+                    <p style="text-align: left;"><em><b>Description:</b></em> With the POCO X5 Pro 5G's abundance of exceptional features, enjoy smooth operations and great efficiency. The Snapdragon 778G processor in this smartphone is exceptionally fast and well-optimised. Additionally, it gives you dependable functionality whenever you need it thanks to its astounding 545K AnTuTu score. For an immersive experience, this phone also has a premium-grade AMOLED display and an exceptionally slim bezel. Moreover, this phone's fantastic 108 MP main camera allows you to take stunning photos and enjoy wonderful image processing. This phone's camera also supports 4K video recording at 30 frames per second.</p>
+                    <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="btn1">Buy Now</button>
+                    <button class="btn2">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top-picks">
+    <h2>Top Picks For You</h2>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 90%;float:inline-end" src="https://rukminim2.flixcart.com/image/312/312/xif0q/tablet/o/y/8/rmp2204-realme-original-imagrhcqdhdyc9tg.jpeg?q=70" alt="">
+        <p class="text-center">realme Pad 2 <br> <b>&#8377;19,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: realme Pad 2 </p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>2K Display with up to 120Hz screen refresh rate</li>
+                        <li>33W SUPERVOOC Charger in-the-box MediaTek Helio G99 Chipset</li>
+                        <li>realme UI 4.0 for Pad Dolby Atmos Quad Speaker with Hi-Res Certification</li>
+                        <li>8MP HD Camera</li>
+                        <li>6 GB RAM | 128 GB ROM | Expandable Upto 2 TB</li>
+                        <li>29.21 cm (11.5 inch) Full HD Display</li>
+                    </ul>
+                </p>
+                <p>Brand: Realme</p>
+                <p>Model: A24521SD2</p>
+                <p>Price : &#8377;<span class="price">19999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> You can elevate your visual experience with the realme Pad 2 which comes with a 120 Hz 2K Super Display. The large screen allows you to browse through the web, enhance creativity, and launch apps effortlessly. Featuring a 33 W SUPERVOOC charge, this tablet can be charged instantly. The 8360 mAh Mega Battery enables uninterrupted performance with its long-lasting battery life. With 16 GB of Dynamic RAM and 256 GB of ROM, this laptop’s performance and speed are bound to blow your mind. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 85%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/tablet/h/4/s/-original-imagu2h39539yhry.jpeg?q=70" alt="">                
+        <p class="text-center">Lenovo Tab M10 <br> <b>&#8377;16,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Lenovo Tab M10</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>6 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                        <li>26.95 cm (10.61 inch) Full HD Display</li>
+                        <li>8.0 MP Primary Camera | 8 MP Front</li>
+                        <li>Android 12 | Battery: 7700 mAh</li>
+                        <li>Voice Call (Single Sim, Wifi, 4G LTE)</li>
+                        <li>Processor: Qualcomm Snapdragon SDM 6803</li>
+                    </ul>
+                </p>
+                <p>Brand: Lenovo</p>
+                <p>Model: A64521SD2</p>
+                <p>Price : &#8377;<span class="price">16999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> You can elevate your visual experience with the Lenovo which comes with a 120 Hz 2K Super Display. The large screen allows you to browse through the web, enhance creativity, and launch apps effortlessly. Featuring a 33 W SUPERVOOC charge, this tablet can be charged instantly. The 8360 mAh Mega Battery enables uninterrupted performance with its long-lasting battery life. With 16 GB of Dynamic RAM and 256 GB of ROM, this laptop’s performance and speed are bound to blow your mind. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 60%;" src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/p/f/-original-imagjdmzb4g943hb.jpeg?q=70" alt="">                
+        <p class="text-center">vivo Y75 5G <br> <b>&#8377;21,499</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: vivo Y75 5G</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>8 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                        <li>16.71 cm (6.58 inch) Full HD+ Display</li>
+                        <li>50MP + 2MP + 2MP | 16MP Front Camera</li>
+                        <li>5000 mAh Lithium Battery</li>
+                        <li>Mediatek Dimensity 700 Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: VIVO</p>
+                <p>Model: Ad4521SD2</p>
+                <p>Price : &#8377;<span class="price">21499</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> Display: It comes with a 6.56-inch AMOLED display with a 1080 x 2376-pixel resolution. The AMOLED screen provides vibrant colors and deep blacks. Performance: The device is powered by the Qualcomm Snapdragon 888 chipset, which is a top-of-the-line processor. This ensures excellent performance for various tasks, including gaming and multitasking.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 70%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/9/e/4/-original-imagtcrumzbqj4xd.jpeg?q=70" alt="">                
+        <p class="text-center">OPPO Reno10 5G <br> <b>&#8377;32,999</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: PPO Reno10 5G</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>8 GB RAM | 256 GB ROM</li>
+                        <li>17.02 cm (6.7 inch) Full HD+ Display</li>
+                        <li>64MP + 32MP + 8MP | 32MP Front Camera</li>
+                        <li>5000 mAh Battery</li>
+                        <li>Dimensity 7050 Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: OPPO</p>
+                <p>Model: AS5521SD2</p>
+                <p>Price : &#8377;<span class="price">32999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>Explore a range of new features on this Oppo Reno 10 5G smartphone. Capture interesting snaps with the ultra clear Portrait camera. This phone has a 64 MP main camera, 32 MP Telephoto camera, 32 MP selfie camera and a 112 degree wide-angle camera. Make a plethora of possibilities with the Telephoto portrait camera available with this phone. The Pro Portrait Mode lets you capture vivid pictures similar to that of a DSLR camera. This sleek phone weighs only about 185 g and has a 3D curved screen with 120 Hz. Powered with a 5000 mAh battery and 67 W SUPERVOOC charger, this phone runs for an entire day. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 70%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/9/l/-original-imagtyw2cvvhz4hj.jpeg?q=70" alt="">                
+        <p class="text-center">Vivo V29 Pro 5G <br> <b>&#8377;39,999</b> </p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: vivo V29 Pro 5G</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>8 GB RAM | 256 GB ROM</li>
+                        <li>17.02 cm (6.7 inch) Full HD+ Display</li>
+                        <li>64MP + 32MP + 8MP | 32MP Front Camera</li>
+                        <li>5000 mAh Battery</li>
+                        <li>Dimensity 7050 Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: VIVO</p>
+                <p>Model: AS5A321SD2</p>
+                <p>Price : &#8377;<span class="price">39999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em>Explore a range of new features on this Vivo V29 Pro 5G smartphone. Capture interesting snaps with the ultra clear Portrait camera. This phone has a 64 MP main camera, 32 MP Telephoto camera, 32 MP selfie camera and a 112 degree wide-angle camera. Make a plethora of possibilities with the Telephoto portrait camera available with this phone. The Pro Portrait Mode lets you capture vivid pictures similar to that of a DSLR camera. This sleek phone weighs only about 185 g and has a 3D curved screen with 120 Hz. Powered with a 5000 mAh battery and 67 W SUPERVOOC charger, this phone runs for an entire day. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="top-picks">
+    <h2>Top Picks For You</h2>
+    <div class="top-picksforyou">
+    <div class="col-6 col-sm-4 col-md-2 item sale1">
+        <img style="width: 70%;float:inline-end" src="https://rukminim2.flixcart.com/image/416/416/kg8avm80/mobile/s/h/f/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfukehtnxv.jpeg?q=70" alt="">
+        <p class="text-center">APPLE iPhone 12 mini <br> <b>&#8377; 42,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: APPLE iPhone 12 mini</p>
+                <p><span class="rating"> 4.5★</span> 15540 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>128 GB ROM
+                            13.72 cm (5.4 inch) Super Retina XDR Display</li>
+                        <li>13.72 cm (5.4 inch) Super Retina XDR Display</li>
+                        <li>12MP + 12MP | 12MP Front Camera</li>
+                        <li>A14 Bionic Chip with Next Generation Neural Engine Processor</li>
+                        <li>Ceramic Shield</li>
+                        <li>Industry-leading IP68 Water Resistance</li>
+                        <li>All Screen OLED Display</li>
+                    </ul>
+                </p>
+                <p>Brand: Apple</p>
+                <p>Model: AS45221SD2</p>
+                <p>Price : &#8377;<span class="price">42999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> Dive into a world of crystal-clear visuals with this iPhone’s Super Retina XDR Display. This beast of a smartphone packs the A14 Bionic chip to make for blazing-fast performance speeds. On top of that, its Dual-camera System, along with Night Mode, helps you click amazing pictures and selfies even when the lighting isn’t as good as you’d want it to be. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>        
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 60%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/u/n/-original-imagzjhwtfthcmzz.jpeg?q=70" alt="">                
+        <p class="text-center">vivo T2x 5G <br> <b>&#8377; 12,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: vivo T2x 5G</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>6 GB RAM | 128 GB ROM</li>
+                        <li>16.71 cm (6.58 inch) Full HD+ Display</li>
+                        <li>50MP + 2MP | 8MP Front Camera</li>
+                        <li>5000 mAh Battery</li>
+                        <li>Dimensity 6020 Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: VIVO</p>
+                <p>Model: AP4521AD2</p>
+                <p>Price : &#8377;<span class="price">12999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> With the superb Vivo T2x 5G, you can take advantage of great pictures and a flawless user experience. With the Vivo T2x 5G, you can experience exceptional performance owing to its 7 nm 5G CPU, the octa-core Dimensity 6020, with a top clock speed of 2.2 GHz. Additionally, the 50 MP main camera on this smartphone beautifully catches every detail you see. Additionally, Super Night Selfie employs noise cancellation technology in conjunction with an Aura Screen Light to produce a calming light that is effective in low light. </p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/kq5iykw0/tablet/t/r/0/sm-t735nzkeinu-samsung-original-imag48f76axd4ehu.jpeg?q=70" alt="">                
+        <p class="text-center">SAMSUNG Galaxy Tab S7 <br> <b>&#8377; 40,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: SAMSUNG Galaxy Tab S7</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>6 GB RAM | 128 GB ROM</li>
+                        <li>31.5 cm (12.4 inches) Full HD Display</li>
+                        <li>8 MP Primary Camera</li>
+                        <li>Android 11 | Battery: 10090 mAh Lithium ion</li>
+                        <li>Voice Call (Single Sim)</li>
+                        <li>Processor: Snapdragon 700 Series</li>
+                    </ul>
+                </p>
+                <p>Brand: SAMSUNG</p>
+                <p>Model: AA45125SD2</p>
+                <p>Price : &#8377;<span class="price">40999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> 
+                    Enjoy the sleekness of the Galaxy Tab S7 FE in your hands. High-Performing Snapdragon 778G chipset for best in class multi-media experience, 8 MP Rear Camera, 5 MP front facing Camera, Dolby Atmos Speakers, Large Vibrant Display, cinematic viewing experience in 16:10 screen-ratio. S-Pen requires no charging, crafted for writing and drawing & taking your imagination to the next level.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 80%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/x/j/-original-imagmkjfhzjhfhhe.jpeg?q=70" alt="">                
+        <p class="text-center">POCO X5 Pro 5G <br> <b>&#8377; 19,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: POCO X5 Pro 5G</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>8 GB RAM | 256 GB ROM</li>
+                        <li>16.94 cm (6.67 inch) Full HD+ Display</li>
+                        <li>108MP + 8MP + 2MP | 16MP Front Camera</li>
+                        <li>5000 mAh Battery</li>
+                        <li>Qualcomm Snapdragon 778G Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: POCO</p>
+                <p>Model: AA4521SD2</p>
+                <p>Price : &#8377;<span class="price">19999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> With the POCO X5 Pro 5G's abundance of exceptional features, enjoy smooth operations and great efficiency. The Snapdragon 778G processor in this smartphone is exceptionally fast and well-optimised. Additionally, it gives you dependable functionality whenever you need it thanks to its astounding 545K AnTuTu score. For an immersive experience, this phone also has a premium-grade AMOLED display and an exceptionally slim bezel. Moreover, this phone's fantastic 108 MP main camera allows you to take stunning photos and enjoy wonderful image processing. This phone's camera also supports 4K video recording at 30 frames per second.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 item items1">
+        <img style="width: 100%;" src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/s/y/0/-original-imaggbrbxkqr3v3u.jpeg?q=70" alt="">                
+        <p class="text-center">Google Pixel 6a <br> <b>&#8377; 34,999</b></p>
+        <div class="popup-container">
+            <div class="popup-content">
+                <h3>Product Details</h3>
+                <p>Product: Google Pixel 6a</p>
+                <p><span class="rating"> 4.4★</span> 12220 Reviews</p>
+                <p style="font-size: 1.5rem;">Highlights
+                    <ul style="width:70% ;margin: 0 25px 0 80px; text-align:left">
+                        <li>6 GB RAM | 128 GB ROM</li>
+                        <li>15.6 cm (6.14 inch) Full HD+ Display</li>
+                        <li>12.2MP + 12MP | 8MP Front Camera</li>
+                        <li>4410 mAh Battery</li>
+                        <li>Google Tensor Processor</li>
+                    </ul>
+                </p>
+                <p>Brand: GOOGLE</p>
+                <p>Model: AP45121SD2</p>
+                <p>Price : &#8377;<span class="price">34999</span> </p>
+                <p style="text-align: left;"><em><b>Description:</b></em> Experience intuitiveness and enjoy seamless operation with smooth transition with the 5G-ready Google Pixel 6a that comes bundled with a myriad of innovative features. Powered by the Google Tensor processor built especially for Pixel enables you to experience seamless juggling and multitasking. Moreover, the powerful battery adapted into this phone gives enormous power to your phone allowing it to run for a prolonged period.</p>
+                <button class="close-popup"><i class="fa-regular fa-circle-xmark"></i></button>
+                <button class="btn1">Buy Now</button>
+                <button class="btn2">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <script src="script.js"></script>
+    <script id="replace_with_footer"></script>
+</body>
+</html>
